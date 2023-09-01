@@ -11,7 +11,7 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  testDir: './tests/UI_Test/',
+  testDir: './tests/UI_Test/OrangeHRM',
   /* Run tests in files in parallel */
   fullyParallel: true,
   workers: 1,
