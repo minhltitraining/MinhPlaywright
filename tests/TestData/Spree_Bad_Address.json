@@ -16,7 +16,7 @@
     },
     {
         "test_case": "TC2",
-        "expResult" : "empty_firstname",
+        "expResult" : "First Name can't be blank",
         "address": {
             "firstname": "",
             "lastname": "Winterburn",
@@ -30,7 +30,7 @@
     },
     {
         "test_case": "TC3",
-        "expResult" : "empty_lastname",
+        "expResult" : "Last Name can't be blank",
         "address": {
             "firstname": "Mark",
             "lastname": "",
@@ -44,7 +44,7 @@
     },
     {
         "test_case": "TC4",
-        "expResult" : "empty_address1",
+        "expResult" : "Address can't be blank",
         "address": {
             "firstname": "Mark",
             "lastname": "Winterburn",
@@ -58,7 +58,7 @@
     },
     {
         "test_case": "TC5",
-        "expResult" : "empty_city",
+        "expResult" : "City can't be blank",
         "address": {
             "firstname": "Mark",
             "lastname": "Winterburn",
@@ -72,7 +72,7 @@
     },
     {
         "test_case": "TC6",
-        "expResult" : "empty_phone",
+        "expResult" : "Phone can't be blank",
         "address": {
             "firstname": "Mark",
             "lastname": "Winterburn",
@@ -86,7 +86,7 @@
     },
     {
         "test_case": "TC7",
-        "expResult" : "empty_zipcode",
+        "expResult" : "Zip Code can't be blank",
         "address": {
             "firstname": "Mark",
             "lastname": "Winterburn",
@@ -100,7 +100,7 @@
     },
     {
         "test_case": "TC8",
-        "expResult" : "empty_state",
+        "expResult" : "State can't be blank",
         "address": {
             "firstname": "Mark",
             "lastname": "Winterburn",
@@ -128,7 +128,7 @@
     },
     {
         "test_case": "TC10",
-        "expResult" : "same_label",
+        "expResult" : "Address name has already been taken",
         "address": {
             "firstname": "Mark",
             "lastname": "Winterburn",
