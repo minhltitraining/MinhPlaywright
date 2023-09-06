@@ -1,4 +1,4 @@
-[
+
     {
         "old_address": {
             "firstname": "Mark",
@@ -9,9 +9,9 @@
             "zipcode": "90210",
             "state_name": "CA",
             "country_iso": "US"
-        }
-    },
-    {
+        },
+
+    
         "new_address": {
             "firstname": "Mark",
             "lastname": "Winterburn",
@@ -23,4 +23,3 @@
             "country_iso": "US"
         }
     }
-]

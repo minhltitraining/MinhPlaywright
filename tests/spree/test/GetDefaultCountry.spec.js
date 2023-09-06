@@ -1,15 +1,4 @@
 const { test, expect } = require('@playwright/test')
-import getToken from './BaseTest';
-let token;
-let username = "minh@spree.com";
-let password = "123456";
-
-
-test.beforeAll(async ({ request }) => {
-  token = await getToken(request, username, password);
-  console.log("Inside before all")
-  console.log(token);
-})
 test.describe('API Testing', () => {
   const baseUrl = 'https://demo.spreecommerce.org'
 

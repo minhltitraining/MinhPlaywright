@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
-let objects = fs.readFileSync('./tests/TestData/Spree_Bad_Address.json')
+let objects = fs.readFileSync('tests/spree/utils/Spree_Bad_Address.json')
 const testcases = JSON.parse(objects);
-import getToken from "./BaseTest";
+import getToken from "../common/BaseTest";
 
 let token;
 let username = "minh@spree.com";

@@ -114,7 +114,7 @@
     },
     {
         "test_case": "TC9",
-        "expResult" : "empty_country",
+        "expResult" : "Country can't be blank",
         "address": {
             "firstname": "Mark",
             "lastname": "Winterburn",
@@ -122,8 +122,7 @@
             "city": "Qethesda",
             "phone": "3488545445002",
             "zipcode": "90210",
-            "state_name": "CA",
-            "country_iso": ""
+            "state_name": "CA"
         }
     },
     {

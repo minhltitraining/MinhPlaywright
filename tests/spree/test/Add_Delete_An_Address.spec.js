@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const fs = require('fs');
-let objects = fs.readFileSync('./tests/TestData/Spree_Add_Update_Address.json')
+let objects = fs.readFileSync('tests/spree/utils/Spree_Add_Update_Address.json')
 const data = JSON.parse(objects);
-import getToken from "./BaseTest";
+import getToken from "../common/BaseTest";
 let token;
 let username = "minh@spree.com";
 let password = "123456";
@@ -20,7 +20,7 @@ test.describe('API Testing', () => {
     //creating an address
     test('POST Request - Add and Delete an Address', async ({ request }) => {
         
-        const response = await request.post(`${baseUrl}/api/v2/storefront/account/addresses`, {
+        let response = await request.post(`${baseUrl}/api/v2/storefront/account/addresses`, {
 
             headers: {
                 'Content-Type': 'application/vnd.api+json',
@@ -28,11 +28,11 @@ test.describe('API Testing', () => {
             },
             data:
             {
-                "address": old_address
+                "address": address
             }
         }) 
 
-        const responseBody = JSON.parse(await response.text())
+        let responseBody = JSON.parse(await response.text())
         console.log(responseBody);
         expect(response.status()).toBe(200);
         expect(responseBody.data.attributes.address1).toBe("123 Main St")
@@ -45,12 +45,9 @@ test.describe('API Testing', () => {
 
             headers: {
                 'Content-Type': 'application/vnd.api+json',
-                'Authorization': `Bearer ${token}`,
-            },
+                'Authorization': `Bearer ${token}`
+            }
         })
-
-        responseBody = JSON.parse(await response.text())
-        console.log(responseBody);
         expect(response.status()).toBe(204);
     })
 })
