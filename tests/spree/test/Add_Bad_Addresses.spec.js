@@ -9,11 +9,8 @@ let username = "minh@spree.com";
 let password = "123456";
 
 
-test.beforeAll(async ({ request }) => {
-    token = "eUgtSi77Fftvw4IzeXCTNHUOfOaLN1tZF0LByPu-o_4";
-    token = await getToken(request, username, password);
-    // console.log("Inside before all")
-    // console.log(token);
+test.beforeAll(async ({ }) => {
+    token = await getToken(username, password);
 })
 
 

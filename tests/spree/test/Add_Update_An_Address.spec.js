@@ -9,8 +9,8 @@ let password = "123456";
 let old_address;
 let new_address;
 
-test.beforeAll(async ({ request }) => {
-    token = await getToken(request, username, password);
+test.beforeAll(async ({}) => {
+    token = await getToken(username, password);
     old_address = data.old_address;
     new_address = data.new_address;
 })
